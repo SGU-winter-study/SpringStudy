@@ -71,7 +71,7 @@ api는 HttpMessageConverter가 동작해서 처리함
 객체면 JsonConverter가 작동해서 - 기본 객체 처리는 스프링에서 MappingJackson2HttpMessageConverter를 이용해서 처리해줌.
 여러가지 처리가 기본으로 등록되어있음. 실무에서 거의 그대로 사용함.
 
-HTTP Accept 헤더에서 요철할 때 데이터 타입을 설정해서 받을 수 있다.
+HTTP Accept 헤더에서 요청할 때 데이터 타입을 설정해서 받을 수 있다.
 이렇게 데이터 타입을 설정해서 요청하면 그에 대응되는 컨버터가 작동해서 반환해준다.
   node.js express를 사용하는 경우에는 다 install하고 require 해줬어야하는데 그런 불편함이 사라지는 것 같다.
 
