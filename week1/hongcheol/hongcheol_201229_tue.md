@@ -1,4 +1,5 @@
-# Optional 
+#DI와 bean
+optional 
 JAVA에서 null을 리턴해줄 때 있는 그대로 null을 리턴해주는 것이 아니라 Optional을 이용해서 감싸서 전달해줄 때 사용.
 	Optional.ofNullable()을 해서 반환을 하면 null이 리턴된 경우에도 클라이언트쪽에서 무언갈 할 수 있게 해준다.
 	NullPointerException에대한 처리인 것 같기도함. - 추후에 조사해서 업데이트 할 예정
