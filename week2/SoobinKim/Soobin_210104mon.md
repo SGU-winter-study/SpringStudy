@@ -36,12 +36,12 @@ MemberService memberService = applicationContext.getBean("memberService", Member
 ApplicationContext는 인터페이스이고, 이를 구체화하여 구현한 것이 **AnnotationConfigApplicationContext**이다. (인자로 1. 메소드(Bean)이름, 2. 반환값 을 보낸다.)
 
 
-####스프링 빈 조회
+#### 스프링 빈 조회
 Bean은 타입으로 조회할 수도 있고, 특정 타입을 가진 Bean이 여러 개 존재하는 경우 이름으로 찾을 수도 있다.
 또한 Bean에는 상속 관계가 있어, 부모 타입으로 조회하면 그 자식 타입들이 전부 함께 조회되게 된다. (Object 타입으로 조회하면 모든 스프링 빈을 조회하게 된다.)
 
 
-####BeanFactory와 ApplicationContext
+#### BeanFactory와 ApplicationContext
 스프링 컨테이너는 BeanFactory와 ApplicationContext 모두를 의미한다.
 - BeanFactory
 스프링 컨테이너의 최상위 인터페이스로, 스프링 빈을 관리하고 조회하는 역할 담당
@@ -52,7 +52,7 @@ ex. 메시지소스를 활용한 국제화 기능, 환경변수, 애플리케이
 따라서 대부분의 경우 우리는 ApplicationContext를 이용하게 된다.
 
 
-####스프링 컨테이너를 사용하면:
+#### 스프링 컨테이너를 사용하면:
 * 기존에 Java 코드를 이용하여 직접 하나하나 수행하던 과정을, 스프링 컨테이너에 스프링 빈으로 객체를 등록함으로써(ex. MemberService, OrderService) 필요할 때마다 스프링 컨테이너에서 스프링 빈을 찾아 사용하도록 할 수 있다.
 
 
@@ -71,7 +71,7 @@ ex. 메시지소스를 활용한 국제화 기능, 환경변수, 애플리케이
 ```
 이렇게 자바 코드에서와 동일하게 문서 형태로 존재한다.
 
-##BeanDefinition
+## BeanDefinition
 위에서 자바 코드 또는 XML로 설정 정보를 저장하는 방법에 대하여 알아보았다.
 스프링에서 자바 코드로 작성된 정보든, XML로 작성된 문서 형태의 정보든 상관 없이 객체들을 스프링 컨테이너에 저장할 수 있는 이유는 **BeanDefinition**이라는 것이 존재하기 때문이다.
 **BeanDefinition**이란 **빈 설정 메타정보**로, 자바 코드의 경우 **@bean**, XML의 경우 **\<bean>** 을 통해 인식하여 각각 하나씩 메타 정보가 생성되게 된다. 스프링 컨테이너는 이러한 메타 정보를 기반으로 스프링 빈을 생성한다.
